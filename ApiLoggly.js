@@ -6,6 +6,9 @@ const Slack = require('./slack');
 const slack = new Slack();
 const hora =  new Date();
 
+app.get('/api/funcionando', (req,res)=>{
+  res.status(200).send();
+});
 
 function routehelper(callback){
   return async (req, res) => {
@@ -27,6 +30,6 @@ app.set('port', process.env.PORT || 3800);
 
 app.listen(app.get('port'), ()=> {
   console.log(`Listening on port ${app.get('port')}...`);
-  //slack.envioSlack(`[${hora}]: El servicio Loggly ha vuelto a la normalidad`);
+  slack.envioSlack(`[${hora}]: El servicio Loggly ha vuelto a la normalidad`);
   
 });

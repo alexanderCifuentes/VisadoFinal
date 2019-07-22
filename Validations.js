@@ -69,9 +69,9 @@ function validationSubscription(data){
 }
 
 function validarSendEmail(data){
-    const {id, artistName, albumName} = data;
+    const {artistId, artistName, albumName} = data;
 
-    if(typeof id !== 'number' || id === undefined){
+    if(typeof artistId !== 'number' || artistId === undefined){
         throw ({cod: 402, errorCode: 'BAD_REQUEST'});
     }
 

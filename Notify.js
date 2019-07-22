@@ -12,7 +12,9 @@ const slack = new Slack();
 const hora =  new Date();
 //-------------------------------------- POST --------------------------------------------------------------
 
-
+app.get('/api/funcionando', (req,res)=>{
+  res.status(200).send();
+});
 
 //Subscribe un email a un artista. Si el email ya está suscrito no hace nada.
 app.post('/api/subscribe', Validations.validate(Validations.validationSubscription), routehelper(async (req, res)=>{
@@ -41,12 +43,12 @@ app.post('/api/notify', (req,res) =>{
 });
 
 //Notifica vía mail, un mensaje a todos los usuarios suscritos a este artista.
-/*app.post('/api/notify', Validations.validate(Validations.validarSendEmail), routehelper (async (req,res) =>{
-  console.log(req.body);
-  //manager.enviarMail(req.body);
+app.post('/api/notify', Validations.validate(Validations.validarSendEmail), routehelper (async (req,res) =>{
+  manager.enviarMail(req.body);
   res.status(200).send({msg: 'OK'})
 }));
-*/
+
+
 //Rutas invalidas
 app.post('*', (req, res) =>{
   res.status(404).send({status: 404, errorCode: 'RESOURCE_NOT_FOUND'});
@@ -86,7 +88,7 @@ app.set('port', process.env.PORT || 7000);
 
 app.listen(app.get('port'), ()=> {
   console.log(`Listening on port ${app.get('port')}...`);
-  //slack.envioSlack(`[${hora}]: El servicio Notify ha vuelto a la normalidad`);
+  slack.envioSlack(`[${hora}]: El servicio NotifyEmail ha vuelto a la normalidad`);
   
 });
 
