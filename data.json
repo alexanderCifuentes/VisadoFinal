@@ -10,7 +10,7 @@
       "artistas": "__00002__",
       "playLists": "__00003__",
       "indexArtista": 0,
-      "indexAlbum": 0,
+      "indexAlbum": -1,
       "indexTrack": -1,
       "indexPlaylist": -1,
       "listeners": "__00004__"
@@ -28,16 +28,7 @@
       "consultaSpotify": false,
       "token": "BQB42vo2crU6Vr5UyLMCAH1b-6PQPPrm84g8cuenZZF4mUgMvqWTMYG0XANYrZfShTEHXYIVTugeV3IKB1Ilbi_xkDjJ3TLKX5fIGZR0R2MoMqy6O_2bUD8h-n3TQhBxeHKuyg09xVlMIyB6pYAuvCuZEzAY8DKh255x-q95OMRFkdkF2meI"
     },
-    "__00006__": {
-      "0": "__00007__"
-    },
-    "__00007__": {
-      "id": 0,
-      "name": "De madrugada",
-      "year": "1995",
-      "tracks": "__00008__"
-    },
-    "__00008__": {}
+    "__00006__": {}
   },
   "types": {
     "__00001__": "UNQfy",
@@ -45,8 +36,6 @@
     "__00003__": "Array",
     "__00004__": "Array",
     "__00005__": "Artista",
-    "__00006__": "Array",
-    "__00007__": "Album",
-    "__00008__": "Array"
+    "__00006__": "Array"
   }
 }

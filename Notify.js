@@ -26,17 +26,27 @@ app.post('/api/subscribe', Validations.validate(Validations.validationSubscripti
 //Desubscribe un email de un feed. Si el email no esta suscrito no hace nada.
 app.post('/api/unsubscribe', Validations.validate(Validations.validationSubscription), routehelper(async (req,res) =>{
   const id =+parseInt(req.body.artistId);
-  await rp(`http://localhost:3000/api/artists/${id}`);
+  const art = await rp(`http://localhost:3000/api/artists/${id}`);
+  console.log(art)
   manager.removeSubscription(req.body.email, parseInt(req.body.artistId));
   res.status(200).send();
 }));
 
+//
+
 //Notifica vía mail, un mensaje a todos los usuarios suscritos a este artista.
-app.post('/api/notify', Validations.validate(Validations.validarSendEmail), routehelper (async (req,res) =>{
+app.post('/api/notify', (req,res) =>{
   manager.enviarMail(req.body);
   res.status(200).send({msg: 'OK'})
-}));
+});
 
+//Notifica vía mail, un mensaje a todos los usuarios suscritos a este artista.
+/*app.post('/api/notify', Validations.validate(Validations.validarSendEmail), routehelper (async (req,res) =>{
+  console.log(req.body);
+  //manager.enviarMail(req.body);
+  res.status(200).send({msg: 'OK'})
+}));
+*/
 //Rutas invalidas
 app.post('*', (req, res) =>{
   res.status(404).send({status: 404, errorCode: 'RESOURCE_NOT_FOUND'});

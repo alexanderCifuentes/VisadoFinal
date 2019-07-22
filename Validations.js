@@ -69,23 +69,20 @@ function validationSubscription(data){
 }
 
 function validarSendEmail(data){
-    const {artistId, subject, message, from} = data;
+    const {id, artistName, albumName} = data;
 
-    if(typeof artistId !== 'number' || artistId === undefined){
-        throw ({cod: 400, errorCode: 'BAD_REQUEST'});
+    if(typeof id !== 'number' || id === undefined){
+        throw ({cod: 402, errorCode: 'BAD_REQUEST'});
     }
 
-    if(typeof subject !== 'string' || subject === undefined){
-        throw ({cod: 400, errorCode: 'BAD_REQUEST'});
+    if(typeof artistName !== 'string' || artistName === undefined){
+        throw ({cod: 402, errorCode: 'BAD_REQUEST'});
     }
 
-    if(typeof message !== 'string' || message === undefined){
-        throw ({cod: 400, errorCode: 'BAD_REQUEST'});
+    if(typeof albumName !== 'string' || albumName === undefined){
+        throw ({cod: 402, errorCode: 'BAD_REQUEST'});
     }
 
-    if(typeof from !== 'string' || from === undefined){
-        throw ({cod: 400, errorCode: 'BAD_REQUEST'});
-    }
 }
 
 function validarArtistId(data){

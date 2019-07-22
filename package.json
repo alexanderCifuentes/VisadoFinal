@@ -7,6 +7,7 @@
     "@moebius/http-graceful-shutdown": "^1.1.0",
     "chai": "^4.1.2",
     "express": "^4.17.1",
+    "googleapis": "^41.0.1",
     "picklify": "github:lwoites/picklify",
     "request": "^2.88.0",
     "request-promise": "^4.2.4",

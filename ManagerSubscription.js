@@ -1,4 +1,6 @@
 const Subscription = require('./Subscription');
+const email = require('./gmail/get-token/sendMail');
+const sendMail = new email();
 
 class ManagerSubscription {
     constructor(){
@@ -44,12 +46,12 @@ class ManagerSubscription {
     }
 
     enviarMail(data){
-        console.log(data);
-        const {artistId, subject, message, from} = data;
+        const {artistId,artistName, albumName} = data;
         const subscripciones = this.usersRegisterByArtist(artistId);
+        console.log(subscripciones)
         if(subscripciones.length>0){
-            console.log(data);
-           // SendEmail.gmailClient.users.messages.send();
+            console.log('Se enviaran mails');
+            subscripciones.forEach((email) => sendMail.enviarEmail(artistName, albumName, email));
         }else{
             console.log(this.subscriptions);
         }
