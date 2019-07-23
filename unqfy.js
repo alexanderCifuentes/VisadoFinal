@@ -1,21 +1,21 @@
 const picklify = require('picklify'); // para cargar/guarfar unqfy
 const fs = require('fs'); // para cargar/guarfar unqfy
 const rp = require('request-promise');
-const ErrorNameDuplicate = require('./nameExists');
-const ErrorArtistExists = require('./ErrorArtistaExists');
-const ErrorAlbumExists = require('./ErrorAlbumExists');
-const ErrorTrackExists = require('./ErrorTrackExists');
-const ErrorPlaylistExists = require('./ErrorPlaylistExists');
-const Artista = require('./Artista');
-const Album = require('./Album');
-const Track = require('./Track');
-const Playlist = require('./Playlist');
-const Loggly = require('./Loggly');
-const ObserverLoggly = require('./ObseverLoggly');
-const ObserverNotify = require('./ObserverNotify');
+const ErrorNameDuplicate = require('./Error/nameExists');
+const ErrorArtistExists = require('./Error/ErrorArtistaExists');
+const ErrorAlbumExists = require('./Error/ErrorAlbumExists');
+const ErrorTrackExists = require('./Error/ErrorTrackExists');
+const ErrorPlaylistExists = require('./Error/ErrorPlaylistExists');
+const Artista = require('./Unqfy/Artista');
+const Album = require('./Unqfy/Album');
+const Track = require('./Unqfy/Track');
+const Playlist = require('./Unqfy/Playlist');
+const Loggly = require('./Loggly/Loggly');
+const ObserverLoggly = require('./Loggly/ObseverLoggly');
+const ObserverNotify = require('./NotifyGmail/ObserverNotify');
 const Log= new ObserverLoggly();
 const Notify = new ObserverNotify();
-const Manager = require('./ManagerSubscription');
+const Manager = require('./NotifyGmail/ManagerSubscription');
 
 
 class UNQfy {

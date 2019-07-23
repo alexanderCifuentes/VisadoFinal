@@ -1,11 +1,11 @@
 const fs = require('fs'); // necesitado para guardar/cargar unqfy
 const unqmod = require('./unqfy'); // importamos el modulo unqfy
-const ErrorNameExist = require('./nameExists');
-const ErrorArtistExists = require('./ErrorArtistaExists');
-const ErrorAlbumExists = require('.//ErrorAlbumExists');
-const ErrorTrackExists = require('./ErrorTrackExists');
-const ErrorPlayExists = require('./ErrorPlaylistExists');
-const ErrorParams = require('./ErrorParams');
+const ErrorNameExist = require('./Error/nameExists');
+const ErrorArtistExists = require('./Error/ErrorArtistaExists');
+const ErrorAlbumExists = require('./Error/ErrorAlbumExists');
+const ErrorTrackExists = require('./Error/ErrorTrackExists');
+const ErrorPlayExists = require('./Error/ErrorPlaylistExists');
+const ErrorParams = require('./Error/ErrorParams');
 
 
 // Retorna una instancia de UNQfy. Si existe filename, recupera la instancia desde el archivo.

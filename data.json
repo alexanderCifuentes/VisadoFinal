@@ -9,26 +9,82 @@
     "__00001__": {
       "artistas": "__00002__",
       "playLists": "__00003__",
-      "indexArtista": 0,
-      "indexAlbum": -1,
-      "indexTrack": -1,
-      "indexPlaylist": -1,
+      "indexArtista": 5,
+      "indexAlbum": 2,
+      "indexTrack": 5,
+      "indexPlaylist": 4,
       "listeners": "__00004__"
     },
     "__00002__": {
-      "0": "__00005__"
+      "0": "__00005__",
+      "1": "__00006__",
+      "2": "__00007__"
     },
-    "__00003__": {},
+    "__00003__": {
+      "0": "__00008__",
+      "1": "__00009__",
+      "2": "__00010__",
+      "3": "__00011__",
+      "4": "__00012__"
+    },
     "__00004__": {},
     "__00005__": {
-      "id": 0,
+      "id": 3,
       "name": "Juanes",
-      "albums": "__00006__",
+      "albums": "__00013__",
       "country": "COL",
       "consultaSpotify": false,
       "token": "BQB42vo2crU6Vr5UyLMCAH1b-6PQPPrm84g8cuenZZF4mUgMvqWTMYG0XANYrZfShTEHXYIVTugeV3IKB1Ilbi_xkDjJ3TLKX5fIGZR0R2MoMqy6O_2bUD8h-n3TQhBxeHKuyg09xVlMIyB6pYAuvCuZEzAY8DKh255x-q95OMRFkdkF2meI"
     },
-    "__00006__": {}
+    "__00006__": {
+      "id": 4,
+      "name": "Mana",
+      "albums": "__00014__",
+      "country": "MEX",
+      "consultaSpotify": false,
+      "token": "BQB42vo2crU6Vr5UyLMCAH1b-6PQPPrm84g8cuenZZF4mUgMvqWTMYG0XANYrZfShTEHXYIVTugeV3IKB1Ilbi_xkDjJ3TLKX5fIGZR0R2MoMqy6O_2bUD8h-n3TQhBxeHKuyg09xVlMIyB6pYAuvCuZEzAY8DKh255x-q95OMRFkdkF2meI"
+    },
+    "__00007__": {
+      "id": 5,
+      "name": "Callejeros",
+      "albums": "__00015__",
+      "country": "ARG",
+      "consultaSpotify": false,
+      "token": "BQB42vo2crU6Vr5UyLMCAH1b-6PQPPrm84g8cuenZZF4mUgMvqWTMYG0XANYrZfShTEHXYIVTugeV3IKB1Ilbi_xkDjJ3TLKX5fIGZR0R2MoMqy6O_2bUD8h-n3TQhBxeHKuyg09xVlMIyB6pYAuvCuZEzAY8DKh255x-q95OMRFkdkF2meI"
+    },
+    "__00008__": {
+      "id": 0,
+      "name": "My Playlist",
+      "tracks": "__00016__"
+    },
+    "__00009__": {
+      "id": 1,
+      "name": "Ruidos",
+      "tracks": "__00017__"
+    },
+    "__00010__": {
+      "id": 2,
+      "name": "Noches de luna",
+      "tracks": "__00018__"
+    },
+    "__00011__": {
+      "id": 3,
+      "name": "Unos Tracks",
+      "tracks": "__00019__"
+    },
+    "__00012__": {
+      "id": 4,
+      "name": "Clasicos",
+      "tracks": "__00020__"
+    },
+    "__00013__": {},
+    "__00014__": {},
+    "__00015__": {},
+    "__00016__": {},
+    "__00017__": {},
+    "__00018__": {},
+    "__00019__": {},
+    "__00020__": {}
   },
   "types": {
     "__00001__": "UNQfy",
@@ -36,6 +92,20 @@
     "__00003__": "Array",
     "__00004__": "Array",
     "__00005__": "Artista",
-    "__00006__": "Array"
+    "__00006__": "Artista",
+    "__00007__": "Artista",
+    "__00008__": "Playlist",
+    "__00009__": "Playlist",
+    "__00010__": "Playlist",
+    "__00011__": "Playlist",
+    "__00012__": "Playlist",
+    "__00013__": "Array",
+    "__00014__": "Array",
+    "__00015__": "Array",
+    "__00016__": "Array",
+    "__00017__": "Array",
+    "__00018__": "Array",
+    "__00019__": "Array",
+    "__00020__": "Array"
   }
 }
